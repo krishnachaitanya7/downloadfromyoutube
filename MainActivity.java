@@ -17,9 +17,10 @@ import java.util.regex.Pattern;
         Pattern pattern = Pattern.compile(urlRegex, Pattern.CASE_INSENSITIVE);
         Matcher urlMatcher = pattern.matcher(text);
 
-        while (urlMatcher.find())        {
+        while (urlMatcher.find()) {
             containedUrls.add(text.substring(urlMatcher.start(0),
-                    urlMatcher.end(0)));        }
+                    urlMatcher.end(0)));
+        }
 
         return containedUrls;
     }
